@@ -1,14 +1,14 @@
 # wav-files-denoise
 
-A Rust CLI tool for recursively denoising WAV audio files using the nnnoiseless noise reduction algorithm. It processes folders (including subfolders), validates files to ensure they match the expected format (WAVE, Microsoft PCM, 16-bit, mono, 16kHz), and outputs denoised versions to a specified directory while preserving the original folder structure.
+A Rust CLI tool for recursively denoising WAV audio files using the nnnoiseless tool. It processes folders (including subfolders), validates files to ensure they match the expected format (WAVE, Microsoft PCM, 16-bit, mono, 16kHz), and outputs denoised versions to a specified directory while preserving the original folder structure.
 
 ## Features
 
 - **Recursive Processing**: Scans input directories and all subdirectories for `.wav` files.
 - **Format Validation**: Uses the `hound` crate to verify files are mono, 16-bit PCM at 16kHz sample rate; skips invalid files.
-- **Noise Reduction**: Integrates with [nnnoiseless](https://github.com/Rikorose/DeepFilterNet) for high-quality denoising.
+- **Noise Reduction**: Integrates with [nnnoiseless](https://github.com/jneem/nnnoiseless) for high-quality denoising.
 - **Preserved Structure**: Outputs maintain the relative path structure from the input.
-- **Flexible Configuration**: Optional paths for nnnoiseless executable and custom model files.
+- **Flexible Configuration**: Optional path for nnnoiseless's custom model file.
 - **Error Handling**: Robust logging for skipped files and failures.
 
 ## Installation
